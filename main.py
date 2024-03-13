@@ -20,7 +20,8 @@ def root(request: Request):
     request = request, name = 'index.html', context = {}
   )
 
-datastore_client = datastore.Client(database = 'registro')
+database_name = 'registro'
+datastore_client = datastore.Client(database = database_name)
 
 
 class FormData(BaseModel):
