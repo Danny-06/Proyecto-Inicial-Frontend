@@ -1,7 +1,7 @@
-const API_ORIGIN = 'https://https://proyecto-inicial-backend-agk6kyxhfa-uc.a.run.app'
+const API_ORIGIN = 'https://https://proyecto-inicial-backend-agk6kyxhfa-uc.a.run.app/'
 
 async function sendData(data) {
-  const endpoint = new URL('/api/send-data', API_ORIGIN)
+  const endpoint = new URL('/api/send-data/', API_ORIGIN)
 
   const stringifiedData = JSON.stringify(data)
 
