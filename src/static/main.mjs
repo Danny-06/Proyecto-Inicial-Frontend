@@ -8,7 +8,7 @@ const API_ORIGIN = 'https://proyecto-inicial-backend-agk6kyxhfa-uc.a.run.app/'
 
 /**
  * 
- * @param {} data 
+ * @param {FormData} data 
  * @returns 
  */
 async function sendData(data) {
@@ -41,5 +41,10 @@ form.addEventListener('submit', event => {
 
   console.log(resultData)
 
-  // sendData(resultData)
+  sendData(resultData)
+  .then(value => alert('Data uploaded successfuly.'))
+  .catch(reason => {
+    console.error(reason)
+    alert('An error occurred after submiting the form.')
+  })
 })
